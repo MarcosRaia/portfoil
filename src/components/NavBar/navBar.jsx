@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { styled } from "styled-components";
-import ShakeImg from "../shakeButton/shakeImg";
+
 
 import eu from '../../assets/eu.jpeg';
-import insta from '../../assets/insta.png';
-import twitter from '../../assets/twitter.png';
-import git from '../../assets/git.png';
-import link from '../../assets/link.png'
+
 
 const NavBar = styled.nav`
     
@@ -16,6 +13,7 @@ const NavBar = styled.nav`
     top: 0;
     height: 100vh;
     background-color: #F2BB13;
+
     
 
 
@@ -189,10 +187,6 @@ const Menu = () => {
                     <a href="resume">RESUME</a>
                     <a href="contact">CONTACT</a>
 
-                    <a href="#"><ShakeImg imgSrc={insta} width="50px" /></a>
-                    <a href="#"><ShakeImg imgSrc={twitter} width="50px" /></a>
-                    <a href="#"><ShakeImg imgSrc={git} width="50px" /></a>
-                    <a href="#"><ShakeImg imgSrc={link} width="50px" /></a>
                 </MediumSreenMenuContent>
             ) : (
                 <MenuContent>
@@ -205,10 +199,6 @@ const Menu = () => {
                         <a href="resume">RESUME</a>
                         <a href="contact">CONTACT</a>
 
-                        <a href="#"><ShakeImg imgSrc={insta} width="50px" /></a>
-                        <a href="#"><ShakeImg imgSrc={twitter} width="50px" /></a>
-                        <a href="#"><ShakeImg imgSrc={git} width="50px" /></a>
-                        <a href="#"><ShakeImg imgSrc={link} width="50px" /></a>
 
 
                     </DropdownContent>

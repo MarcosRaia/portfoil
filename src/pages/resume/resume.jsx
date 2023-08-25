@@ -1,10 +1,12 @@
 import React from "react";
 import Menu from "../../components/NavBar/navBar";
 import Card from "../../components/Card/card";
+import Skills from "../../components/skills/skillsCard";
 import { styled } from "styled-components";
 import BorderTitle from "../../components/BorderTitle/title";
 
 import html from '../../assets/html.png'
+import css from '../../assets/css.png'
 import node from '../../assets/node.png'
 import reactPhoto from '../../assets/reactPhoto.png'
 import js from '../../assets/js.png'
@@ -36,78 +38,69 @@ const Items = styled.div`
     }
 `
 const Container = styled.section`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    background-color: #DDDDDC;
-    justify-content: flex-start;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: #DDDDDC;
+  justify-content: flex-start;
+  height: 100vh;
 
-    @media(min-width: 320px) and (max-width: 375px){
-        height: 100%;
-    }
 
-    
-    @media(min-width: 375px) and (max-width: 768px){
-        height: 0%;
-    }
+  @media (min-width: 320px) and (max-width: 480px){
+    height: 100%
+  }
 
-    @media(min-width: 1025px){
-        height: 0%;
-        
-    }
+  @media (min-width: 481px) and (max-width: 768px) {
+    height: 100%;
+  }
 
-    
+  @media (min-width: 768px) and (max-width: 1024px) {
+    height: auto; 
+  }
 
-`
+  @media (min-width: 1025px){
+    height: auto;
+  }
+
+`;
+
+
 const CardContainer = styled.div`
 
     display:flex;
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: 320px) and (max-width: 375px){
+    @media (min-width: 320px) and (max-width: 480px){
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    @media (min-width: 375px) and (max-width: 768px){
+    @media (min-width: 481px) and (max-width: 768px){
         display:flex;
         flex-direction: column;
         align-items: center;
     }
-    
-    @media (min-width: 900px){
-        width:70%
-    }
-
 `
 const EducationTitle = styled.h3`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-family: 'Lilita One', cursive;
+  background-color: #f2bb13;
+  width: 141px;
 
-    margin-top: 10px;
-    font-family: 'Lilita One', cursive;
-    background-color: #f2bb13;
-    width: 99px
+  @media (min-width: 320px) and (max-width: 768px) {
+    width: 141px;
+  }
 
-    @media(min-width: 320px) and (max-width: 374px){
-        display:flex;
-        align-items: center;
-        width: 141px;
-        font-family: 'Lilita One', cursive;
-        background-color: #f2bb13;
-
-    }
-
-    @media(min-width: 375px) and (max-width: 768px){
-        display: flex;
-        align-items: center;
-        width: 141px;
-        font-family: 'Lilita One', cursive;
-        background-color: #f2bb13;
-    }
-
-`
+  @media (min-width: 900px) {
+    
+  }
+`;
 const JobTitle = styled.h3`
 
     width: 141px;
@@ -131,42 +124,40 @@ const JobTitle = styled.h3`
         background-color: #f2bb13;
 
     }
+
+    @media (min-width: 900px) {
+        
+      }
 `
-const Skills = styled.h3`
-    font-family: 'Lilita One', cursive;
-    background-color: #f2bb13;
+const SkillsTitle = styled.h3`
+  display: flex;
+  align-items: center;
+  font-family: 'Lilita One', cursive;
+  background-color: #f2bb13;
+  width: 57px;
+
+  @media (min-width: 320px) and (max-width: 768px) {
     width: 57px;
+  }
 
-    @media(min-width: 320px) and (max-width: 374px){
-        display:flex;
-        align-items: center;
-        font-family: 'Lilita One', cursive;
-        background-color: #f2bb13;
-        width: 57px;
-
-    }
-
-    @media(min-width: 375px) and (max-width: 768px){
-        display:flex;
-        align-items: center;
-        font-family: 'Lilita One', cursive;
-        background-color: #f2bb13;
-        width: 57px;
-
-    }
-`
+  @media (min-width: 900px) {
+    
+  }
+`;
 
 
 const Resume = () => {
     return <>
         <Menu />
+        
         <Container>
-        <BorderTitle title={"RESUME"} />
+        
 
             <CardContainer>
+            <BorderTitle title={"RESUME"} />
                <EducationTitle>EDUCATION</EducationTitle>
             <Card columns={3} gap={50}>
-            
+                
                 <Items>
     
                     <p>2019-2023 | Bachelor in Information Systems</p>
@@ -185,7 +176,6 @@ const Resume = () => {
                         of the world.
                     </p>
                 </Items>
-
                 <Items>
                     <p>2023 - on course | GRADUATE STUDENT MBA DEVOPS ENGINEERING AND CLOUD SOLUTIONS</p>
                     <p>Mackenzie Presbyterian University</p>
@@ -218,16 +208,16 @@ const Resume = () => {
                 </Items>         
             </Card>
             
-            <Skills>SKILLS</Skills>
-            <Card columns={5} gap={40}>
-            <Items><img src={html} alt="" /></Items>
-            <Items><img src={reactPhoto} alt="" /></Items>
-            <Items><img src={node} alt="" /></Items>
-            <Items><img src={js} alt="" /></Items>
-            <Items><img src={sass} alt="" /></Items>
-            
-            </Card>
+            <SkillsTitle>SKILLS</SkillsTitle>
             </CardContainer>
+            <Skills>
+                <Items> <img src={node} alt={"node"} /> </Items>
+                <Items> <img src={html} alt={"html"} /> </Items> 
+                <Items> <img src={reactPhoto} alt={"reactPhoto"} /> </Items> 
+                <Items> <img src={css} alt={"css"} /> </Items> 
+                <Items> <img src={sass} alt={"sass"} /> </Items>
+                <Items> <img src={js} alt={"js"} /> </Items>
+            </Skills>
         </Container>
 
 

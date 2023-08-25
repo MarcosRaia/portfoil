@@ -19,7 +19,10 @@ const Container = styled.section`
     height: 100vh;
     background-color: #DDDDDC;
 
-    @media (min-width: 320px) and (max-width: 374px){
+    @media (min-width: 320px) and (max-width: 375px),
+           (min-width: 375px) and (max-width: 768px),
+           (min-width: 768px) and (max-width: 1024px),
+           (min-width: 1024px) and (max-width: 1880px) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -28,7 +31,7 @@ const Container = styled.section`
         background-color: #DDDDDC;
     }
 
-    @media (min-width: 375px) and (max-width: 499px){
+    @media (min-width: 1024px) and (max-width: 1880px){
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -37,32 +40,6 @@ const Container = styled.section`
         background-color: #DDDDDC;
     }
 
-    @media (min-width: 500px) and (max-width: 768px){
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        background-color: #DDDDDC;
-    }
-
-    @media (min-width: 769px) and (max-width: 1024px){
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        background-color: #DDDDDC;
-    }
-
-    @media (min-width: 770px) and (max-width: 1024px){
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        background-color: #DDDDDC;
-    }
 `
 
 const SubContainer = styled.article`
@@ -77,8 +54,19 @@ const SubContainer = styled.article`
         margin-bottom: 10px;
     }
 
-    @media (max-width: 1024px){
-        padding: 0 0 0 20px;
+    @media (min-width: 320px) and (max-width: 375px){
+        padding: 0 8px 0 8px;
+    }
+    @media (min-width: 375px) and (max-width: 768px){
+        padding: 0 8px 0 8px;
+    }
+    
+    @media (min-width: 768px) and (max-width: 899px){
+        padding: 0 8px 0 8px;
+    }
+
+    @media (min-width: 900px) and (max-width: 1024px){
+        margin-left: 1em;
     }
 
 `
@@ -94,17 +82,18 @@ const SectionContaineir = styled.div`
     font-size: 27px;
     }
 
-    @media (max-width: 320px){
+    @media (min-width: 320px) and (max-width: 375px){
         width: 100%;
     }
 
-    @media (max-width: 375px){
+    @media (min-width: 375px) and (max-width: 768px){
         width: 100%;
     }
 
-    @media (max-width: 768px){
+    @media (min-width: 768px) and (max-width: 899px){
         width: 100%;
     }
+
 
 
 `
@@ -117,13 +106,22 @@ const StyledSection = styled.section`
     font-family: 'Lilita One', cursive;
     
     & > h2{
+        display: flex;
+        justify-content: center;
         background-color: #f2bb13;
-        width: 57%;
+        width: 100%;
+        font-size: 22px;
     }
 
-    @media (min-width: 320px) and (max-width: 374px){
+    & > p {
+        text-align: justify;
+        hyphens: auto;
+        padding: 2px;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px){
         & > h2 {
-            width:64%;
+            width:100%;
             font-size: 21px;
             text-align: justify;
             } 
@@ -134,41 +132,11 @@ const StyledSection = styled.section`
                 hyphens: auto;
             }
     }
-
-
-    @media(min-width: 375px) and (max-width: 499px){
+    @media (min-width: 481px) and (max-width: 768px){
         & > h2 {
-        width:64%;
-        font-size: 21px;
-        text-align: justify;
-        } 
-
-        & > p {
-            padding: 2px;
-            text-align: justify;
-            hyphens: auto;
-        }
-    }
-
-    @media (min-width: 500px) and (max-width: 768px){
-        & > h2 {
-        width:64%;
-        font-size: 21px;
-        text-align: justify;
-        } 
-
-        & > p {
-            padding: 2px;
-            text-align: justify;
-            hyphens: auto;
-        }
-    }
-
-    @media (min-width: 769) and (max-width: 1024px){
-        & > h2 {
-            width:64%;
+            width:100%;
             font-size: 21px;
-            text-align: justify;
+            text-align: center;
             } 
     
             & > p {
@@ -177,17 +145,47 @@ const StyledSection = styled.section`
                 hyphens: auto;
             }
     }
+
+    @media (min-width: 769px) and (max-width: 899px){
+        & > h2 {
+            width:100%;
+            font-size: 21px;
+            text-align: center;
+            } 
+    
+            & > p {
+                padding: 2px;
+                text-align: justify;
+                hyphens: auto;
+            }
+    }
+
+    @media (min-width: 900px) and (max-width: 1024px){
+        & > h2 {
+            width:100%;
+            font-size: 21px;
+            text-align: center;
+            } 
+    
+            & > p {
+                padding: 2px;
+                text-align: justify;
+                hyphens: auto;
+            }
+    }
+
 
 `
 const ListItems = styled.ul`
     display: flex;
     flex-direction: column;
     
-
     & > li{
         display: flex;
         align-items: center;
         margin-bottom: 30px;
+        text-align: justify;
+        hyphens: auto;
     }
 
 `
@@ -200,10 +198,11 @@ const About = () => {
         <Container>
             <Menu />
             
-            <BorderTitle title='ABOUT' />
+            
             <SubContainer>
 
                 <SectionContaineir>
+                <BorderTitle title='ABOUT' />
                     <StyledSection>
                         <h2>I´M MARCOS RAIA, PROFESSIONAL IT / DEVELOPER</h2>
                         <p>Developer who is passionate about technology and innovation. My bachelor's degree in information

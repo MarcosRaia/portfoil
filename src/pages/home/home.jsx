@@ -30,50 +30,50 @@ const ImgContainer = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  @media (max-width: 320px) {
+  @media (min-width: 320px) and (max-width: 480px) {
     order: -1;
     width: 100%;
-    height: 60vh;
+    height: 64vh;
   }
 
-  @media (max-width: 375px) {
+
+  @media (min-width: 481px) and (max-width: 768px) {
     order: -1;
     width: 100%;
-    height: 75vh;
+    height: 76vh;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 769px) and (max-width: 1024px){
     order: -1;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
   }
-
-  @media (max-width: 1024px) {
-    order: -1;
-    width: 100%;
-    height: 80vh;
-  }
+  
 `;
 
 const Img = styled.img`
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 
-  @media (max-width: 320px),
-         (max-width: 768px),
-         (max-width: 1024px),
-         (max-width: 1280px),
-         (max-width: 1440px),
-         (max-width: 1680px),
-         (max-width: 1920px) {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    max-width: none;
+  @media (min-width: 320px) and (max-width: 480px){
+    height: 60vh;
   }
+  
+  @media (min-width: 481px) and (max-width: 768px){
+    height: 92vh;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px){
+    height: 120vh;
+  }
+
+  @media (min-width: 1025px){
+    height: 100vh;
+  }
+
+
 `;
 
 const Title = styled.p`

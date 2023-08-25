@@ -31,6 +31,7 @@ const ShakeImg = (props) => {
     return<>
         <Shake>
             <img src={props.imgSrc} width={props.width} />
+            {props.children}
         </Shake>
     </>
 

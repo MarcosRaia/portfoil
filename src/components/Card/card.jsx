@@ -5,6 +5,7 @@ const Grid = styled.div`
     display: grid;
     width:100%;
     margin: auto;
+    overflow-x: auto;
     font-family: 'Lilita One', cursive;
     justify-items: center;
     grid-template-columns: ${props => `repeat(${props.columns}, 2fr)`};
@@ -12,7 +13,7 @@ const Grid = styled.div`
 
 
     @media(min-width: 320px) and (max-width: 375px){
-        width: 85%;
+        
         grid-template-columns: 1fr;
         grid-gap: 10px;
 
@@ -29,9 +30,16 @@ const Grid = styled.div`
         grid-gap: 10px;
     }
 
-    @media (min-width: 900px){
-        margin-left: 15%;
-        grid-template-columns: 2fr 2fr;
+    @media (min-width: 900px) and (max-width: 1023px){
+        width: 30em;
+        grid-template-columns: 1fr;
+        /* margin-left: 4em; */
+        grid-gap: 10px;
+    }
+
+    @media (min-width: 1024px){
+        width: 33em;
+        grid-template-columns: 1fr;
         grid-gap: 10px;
     }
 `
