@@ -48,8 +48,10 @@ const SkillCard = styled.div`
 
 const Skills = (props) => {
     return <>
-        <SkillCard>
+        <SkillCard >
+            <a href={props.link}>
             <img src={props.image} alt={props.description} />
+            </a>
             {props.children}
         </SkillCard>
     </>

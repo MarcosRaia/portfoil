@@ -22,22 +22,6 @@ const Container = styled.section`
     background-color: #DDDDDC;
     justify-content: flex-start;
 
-
-    // @media (min-width: 320px) and (max-width: 480px){
-        
-    // }
-
-    // @media(min-width: 481px) and (max-width: 768px){
-    //     height: 100%;
-    // }
-
-    // @media(min-width: 769px) and (max-width: 1024px){
-    //     height: auto;
-    // }
-
-    // @media (min-width: 1025px){
-    //     height: auto;
-    // }
 `
 const SubContainer = styled.article`
     width: 50%;
@@ -111,6 +95,7 @@ const Contact = () => {
             </SubContainer>
 
             <Skills>
+                
                 <Items><img src={whats} alt="" /></Items>
                 <Items><img src={Telegram} alt="" /></Items>
                 <Items><img src={Gmail} alt="" /></Items>
